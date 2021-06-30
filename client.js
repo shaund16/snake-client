@@ -7,16 +7,13 @@ const connect = function () {
     port: 50541
   });
 
+  // interpret incoming data as text
+  conn.setEncoding("utf8");
 
   conn.on("connect", () => {
     console.log('Successfully connected to the game server!');
     conn.write('Name: SDP');
-    setInterval(() => {
-      // conn.write('Move: up');
-    }, 50);
   
-    // interpret incoming data as text
-    conn.setEncoding("utf8");
   });
   return conn;
 };
