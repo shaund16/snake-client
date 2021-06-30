@@ -27,8 +27,11 @@ const handleUserInput = function (key) {
     break;
   case 'd':
     connection.write('Move: right');
+    break;
+  case 'y':
+    connection.write('Say: YUM');
+    break;
   }
-  
 };
 
 module.exports = {setupInput};
